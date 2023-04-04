@@ -1,4 +1,4 @@
-public class ForCollection {
+public class ForCollection{
     // public void demoMethod(){
     //     List<Account> accountListObject=[select AccountNumber from Account];
     //     for(Account listobj:accountListObject){
@@ -6,7 +6,7 @@ public class ForCollection {
     //     }
     // }
     
-    public  List<Object> listCollection(){
+    public  List<Integer> listCollection(){
          List<Integer> listObject=new List<Integer>();
         //List<Account> accountListObject=[select AccountNumber,Name, from Account];
         
@@ -24,9 +24,8 @@ public class ForCollection {
         for(Integer itr: listObject){
             System.debug('ID : '+itr);
         }*/
-        List<Account> obj=new List<Account>();
-        obj=[select AccountName from Account];
-        return obj;
+        
+        return listObject;
     }
     public Set<String>  setCollection(){
         Set<String> setObject=new Set<String>();
@@ -74,9 +73,9 @@ public class ForCollection {
         ForCollection ClassObjectForAc = new ForCollection();
         System.debug('/*======================================List To Set===================================================================*/');
         //  List to Set
-        List<Integer> listObject=new List<Integer>();
-        listObject=ClassObjectForAc.listCollection();
-        Set<Integer> setObject=new Set<Integer>(listObject);
+        List<Integer> listObject4=new List<Integer>();
+        listObject4=ClassObjectForAc.listCollection();
+        Set<Integer> setObject=new Set<Integer>(listObject4);
         System.debug('List to set : '+setObject);
 /*=========================================================================================================*/
 		//Set To List
@@ -97,12 +96,11 @@ public class ForCollection {
         System.debug('\nKey Value From Set : '+setObjectToMapForKey+'\nValue value From Set : '+setObjectToMapForValue);
         List<Integer> listObjectForMap=new List<Integer>(mapObjects.keySet());
 /*=========================================================================================================*/
-
-    }
-}
-
-
 /*
 ForCollection obj=new ForCollection();
 obj.conversionCollection();
 */
+    }
+}
+
+

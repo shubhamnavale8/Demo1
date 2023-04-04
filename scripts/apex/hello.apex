@@ -24,5 +24,22 @@ System.debug(arr.getStudentId()+' '+arr.getStudentName()+' '+arr.studentFees());
 select ID from Account;
 
 
+
 ForCollection obj=new ForCollection();
 obj.demoMethod();
+
+
+//------------------------------Exception code----------------------------------
+
+ForExceptionCheck exceptionObject=new ForExceptionCheck();
+exceptionObject.dmlExceptionMethod();
+exceptionObject.listExceptionMethod();
+exceptionObject.nullPointerExceptionMethod();
+exceptionObject.queryExceptionMethod();
+exceptionObject.genericExceptionMethod();
+
+
+SOQLtestClassForCheck obj=new SOQLtestClassForCheck();
+obj.accountSOQLmethod();
+
+

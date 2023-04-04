@@ -11,7 +11,7 @@ public virtual class Student {
         this.studentName=studentName;
         this.studentFee=studentFee;
     }
-    //parameter less Constructor
+    //Defult Constructor
     public Student(){
 		this.studentAddress=' ';
         this.studentId=0;
