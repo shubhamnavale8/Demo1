@@ -24,12 +24,13 @@ public with sharing class SOQLtestClassForCheck {
         for(Contact val3: forContactDetails){
             System.debug('\n'+val3);
         }
-
-        //List<Account> accountWithContact =[select Name,AccountNumber,(select LastName,FirstName from Contacts) From Account GROUP BY Name ];
+        // For Group by We Have to use AggregateResult as well as for Aggregate Function
+        List<AggregateResult> accountWithContact =[select Name,COUNT(AccountNumber) From Account GROUP BY Name ];
+        AggregateResult value=[select COUNT(Email) From Contact];
+        Integer Val=(Integer)value.get('expr0');
         // error mesage for this Query is := Grouped query cannot use child relationships in the SELECT list (28:43)
         String name='shubham';
         List<List<SObject>> ssobjects=[FIND :name in ALL Fields Returning Contact(LastName,FirstName)];
-        
         
     }
 }
