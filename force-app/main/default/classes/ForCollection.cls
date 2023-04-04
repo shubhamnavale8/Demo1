@@ -1,11 +1,12 @@
 public class ForCollection {
-    public void demoMethod(){
-        List<Account> accountListObject=[select AccountNumber from Account];
-        for(Account listobj:accountListObject){
-            System.debug('Account From Org : '+listobj);   
-        }
-    }
-    public  List<Integer> listCollection(){
+    // public void demoMethod(){
+    //     List<Account> accountListObject=[select AccountNumber from Account];
+    //     for(Account listobj:accountListObject){
+    //         System.debug('Account From Org : '+listobj);   
+    //     }
+    // }
+    
+    public  List<Object> listCollection(){
          List<Integer> listObject=new List<Integer>();
         //List<Account> accountListObject=[select AccountNumber,Name, from Account];
         
@@ -23,8 +24,9 @@ public class ForCollection {
         for(Integer itr: listObject){
             System.debug('ID : '+itr);
         }*/
-        
-        return listObject;
+        List<Account> obj=new List<Account>();
+        obj=[select AccountName from Account];
+        return obj;
     }
     public Set<String>  setCollection(){
         Set<String> setObject=new Set<String>();
