@@ -38,8 +38,25 @@ exceptionObject.nullPointerExceptionMethod();
 exceptionObject.queryExceptionMethod();
 exceptionObject.genericExceptionMethod();
 
-
+//------------------------------SOQL And SOSL code----------------------------------
 SOQLtestClassForCheck obj=new SOQLtestClassForCheck();
 obj.accountSOQLmethod();
+
+//------------------------------DATABASE code----------------------------------------
+
+
+ForDatabaseClass obj=new ForDatabaseClass();
+obj.DataBaseMethod();
+
+
+//------------------------------DATABASE assignment code----------------------------------------
+
+ForDataBaseAssignment newObject=new ForDataBaseAssignment();
+//newObject.DatabaseInsertMethod();
+//newObject.DatabaseUpdateMethod();
+//newObject.DatabaseDeleteMethod();
+newObject.DatabaseGetRecordMethod();
+
+
 
 
