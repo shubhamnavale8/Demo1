@@ -30,7 +30,7 @@ public with sharing class SOQLtestClassForCheck {
         Integer Val=(Integer)value.get('expr0');
         // error mesage for this Query is := Grouped query cannot use child relationships in the SELECT list (28:43)
         String name='shubham';
-        List<List<SObject>> ssobjects=[FIND :name in ALL Fields Returning Contact(LastName,FirstName)];
+        List<List<SObject>> ssobjects=[FIND :name in ALL Fields Returning Contact(LastName,FirstName),Account,Lead];
         
     }
 }
